@@ -1,0 +1,45 @@
+
+ion-content {
+    --background: url('../../../assets/background.jpg') no-repeat;
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+
+  }
+
+
+  form {
+    background-color: #ffffff;
+    width: 85%;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  .imagen{
+    width: 130px;
+    height: 130px;
+    object-fit: cover;
+    object-position: left;
+  }
+
+  .container{
+    display: flex;
+    justify-content: center;
+    margin: 25px 0 25px 0;
+
+  }
+
+  .input-item{
+    margin: 8px 0;
+  }
+
+  ion-toggle{
+    --background: rgba(234, 229, 229, 0.72);
+    --handle-background: rgba(146, 143, 146, 0.95);
+  }
+
+  ion-button, ion-input, ion-label{
+    font-size: 15px !important;
+  }
+
+

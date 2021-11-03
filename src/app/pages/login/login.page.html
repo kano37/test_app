@@ -1,0 +1,56 @@
+<ion-content>
+
+        <div class="container">
+          <img style="margin: auto" class="imagen" src="../../../assets/logo.jpg">
+        </div>
+
+  <form (ngSubmit)="login(fLogin)"  #fLogin="ngForm" >
+   <ion-grid class="ion-no-padding">
+
+      <ion-row>
+        <ion-col>
+
+          <ion-list lines="none">
+
+            <ion-item class="input-item ion-padding-horizontal" lines="full">
+              <ion-icon size="small" name="person-outline" color="medium" slot="start"></ion-icon>
+              <ion-input name="email"
+                         type="email"
+                         placeholder="Email"
+                         [(ngModel)]="usuario.email"
+                         pattern="[A-Za-z0-9._%+-]{3,}@[a-zA-Z]{3,}([.]{1}[a-zA-Z]{2,}|[.]{1}[a-zA-Z]{2,}[.]{1}[a-zA-Z]{2,})"
+                         required></ion-input>
+            </ion-item>
+
+            <ion-item class="input-item ion-padding-horizontal" lines="full">
+              <ion-icon size="small" name="lock-closed-outline" color="medium" slot="start"></ion-icon>
+              <ion-input name="password"
+                         type="password"
+                         placeholder="Password"
+                         minlength="5"
+                         [(ngModel)]="usuario.password"
+                         required></ion-input>
+            </ion-item>
+            <ion-item class="input-item">
+              <ion-label>Recordar</ion-label>
+              <ion-toggle mode="md" name="recordar" [(ngModel)]="usuario.remember"></ion-toggle>
+
+            </ion-item>
+
+
+
+          </ion-list>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col>
+          <ion-button type="submit" color="primary" size="large" expand="full" class="ion-no-margin">Acceder</ion-button>
+        </ion-col>
+      </ion-row>
+
+    </ion-grid>
+  </form>
+
+
+</ion-content>
